@@ -1,69 +1,125 @@
-import Image from "next/image";
+import Link from "next/link";
+import SiteFooter from "../components/SiteFooter";
+import SiteHeader from "../components/SiteHeader";
+import {
+  AboutSection,
+  ConnectSection,
+  ProjectsSection,
+  SkillsSection,
+} from "../components/PortfolioSections";
+
+function ArrowIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 16 16" fill="none">
+      <path
+        d="M4 12 12 4M5 4h7v7"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function BrandMark() {
+  return <span className="brand-mark" aria-hidden="true">&lt;/&gt;</span>;
+}
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
+    <div className="page-shell">
+      <SiteHeader activePage="home" /> 
+<main className="snap-home">
+      <section className="hero section-shell" id="home">
+        <p className="eyebrow hero-eyebrow"><span className="status-dot" /> Software Engineer</p>
+        <div className="hero-copy">
+          <h1>
+            <span className="hero-first-name glass-text">Mandlenkosi</span>
+            <span className="hero-last-name glass-text">Zulu.</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="hero-description">
+            I build thoughtful, accessible digital experiences for the web.
+            I enjoy turning ideas into practical, user-friendly software.
           </p>
+
+          <div className="hero-actions">
+            <Link className="button button-primary" href="/projects">
+              Explore my work <ArrowIcon />
+            </Link>
+            <a
+              className="button button-outline"
+              href="https://github.com/mandlenkosizulukaptain-hub"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub profile
+            </a>
+            <a
+              className="button button-outline mobile-cv-button"
+              href="/Mandlenkosi%20E.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View my CV
+            </a>
+          </div>
+
+          <div className="hero-note">
+            <span className="note-line" />
+            <span>Curious by nature. Focused on building useful things.</span>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="hero-art" aria-label="Profile illustration">
+          <div className="orbit orbit-one" />
+          <div className="orbit orbit-two" />
+          <div className="hero-glow" />
+          <div className="profile-illustration">
+            <div className="illustration-grid" />
+            <div className="portrait-placeholder">
+              <video
+                className="portrait-video"
+                src="/bridesmaid-inspiration.mp4"
+                aria-label="Bridesmaid dress inspiration video"
+                autoPlay
+                loop
+                muted
+                playsInline
+                controls
+                preload="metadata"
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div className="profile-label">
+              <span className="label-mark"><BrandMark /></span>
+              <a
+                className="profile-cv-link"
+                href="/Mandlenkosi%20E.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View my CV <ArrowIcon />
+              </a>
+            </div>
+          </div>
+          <div className="art-sparkle sparkle-one">✳</div>
+          <div className="art-sparkle sparkle-two">✦</div>
         </div>
+        <div className="hero-scroll" aria-hidden="true">
+          <span />
+          Scroll to explore
+        </div>
+      </section>
+
+      <AboutSection headingLevel="h2" />
+      <SkillsSection headingLevel="h2" />
+      <ProjectsSection headingLevel="h2" />
+      <ConnectSection headingLevel="h2" />
+
       </main>
+      <SiteFooter />
     </div>
   );
 }

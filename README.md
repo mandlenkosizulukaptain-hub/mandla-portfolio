@@ -18,6 +18,24 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
+## Contact form email delivery
+
+The Connect page submits messages to `/api/contact`. The handler implementation
+is in `api/contact/route.ts` and is registered by
+`app/api/contact/route.ts`. It sends messages through Resend. Create a Resend
+account, verify a sender domain, and add these values to a local `.env.local`:
+
+```env
+RESEND_API_KEY=re_your_api_key
+CONTACT_FROM_EMAIL=contact@your-verified-domain.com
+CONTACT_TO_EMAIL=mandlenkosizulukaptain@gmail.com
+```
+
+Keep `.env.local` private and never commit the API key. Set the same values in
+your hosting provider's environment settings for deployment. The existing
+email link remains available if the form has not been configured or email
+delivery fails.
+
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More
