@@ -33,21 +33,21 @@ export default function SiteHeader({ activePage }: { activePage?: SitePage }) {
       </Link>
 
       <nav className="site-nav" aria-label="Main navigation">
-        <Link href="/#home" aria-current={activePage === "home" ? "page" : undefined}>
+        <a href="#home" aria-current={activePage === "home" ? "page" : undefined}>
           HOME
-        </Link>
-        <Link href="/about" aria-current={activePage === "about" ? "page" : undefined}>
+        </a>
+        <a href="#about">
           ABOUT
-        </Link>
-        <Link href="/skills" aria-current={activePage === "skills" ? "page" : undefined}>
+        </a>
+        <a href="#skills">
           SKILLS
-        </Link>
-        <Link href="/projects" aria-current={activePage === "projects" ? "page" : undefined}>
+        </a>
+        <a href="#projects">
           PROJECTS
-        </Link>
-        <Link href="/connect" aria-current={activePage === "connect" ? "page" : undefined}>
+        </a>
+        <a href="#connect">
           CONNECT
-        </Link>
+        </a>
       </nav>
 
       <a

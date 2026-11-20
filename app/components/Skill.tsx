@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import SiteFooter from "../../components/SiteFooter";
-import SiteHeader from "../../components/SiteHeader";
-import { SkillsSection } from "../../components/PortfolioSections";
+import SiteFooter from "./SiteFooter";
+import SiteHeader from "./SiteHeader";
+import { SkillsSection } from "./PortfolioSections";
 
 export const metadata: Metadata = {
   title: "Skills | Mandlenkosi Zulu",

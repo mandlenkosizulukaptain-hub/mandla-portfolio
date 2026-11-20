@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import SiteFooter from "../../components/SiteFooter";
-import SiteHeader from "../../components/SiteHeader";
-import { ConnectSection } from "../../components/PortfolioSections";
+import SiteFooter from "./SiteFooter";
+import SiteHeader from "./SiteHeader";
+import { ConnectSection } from "./PortfolioSections";
 
 export const metadata: Metadata = {
   title: "Connect | Mandlenkosi Zulu",

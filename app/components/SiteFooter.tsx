@@ -93,11 +93,11 @@ export default function SiteFooter() {
         <div className="footer-columns">
           <nav className="footer-group" aria-label="Footer navigation">
             <h2>Explore</h2>
-            <Link href="/#home">Home</Link>
-            <Link href="/about">About</Link>
-            <Link href="/skills">Skills</Link>
-            <Link href="/projects">Projects</Link>
-            <Link href="/connect">Connect</Link>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#connect">Connect</a>
           </nav>
 
           <div className="footer-group">
@@ -134,7 +134,7 @@ export default function SiteFooter() {
 
         <div className="footer-bottom">
           <span>&copy; Mandlenkosi Zulu</span>
-          <Link href="/#home">Back to top ↑</Link>
+          <a href="#home">Back to top ↑</a>
         </div>
       </div>
     </footer>

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import ContactForm from "./ContactForm";
 
 type SectionHeadingLevel = "h1" | "h2";
@@ -57,9 +56,9 @@ export function AboutSection({
             My current interests include full-stack development, UI/UX design,
             and finding simple solutions to everyday problems.
           </p>
-          <Link className="text-link" href="/projects">
+          <a className="text-link" href="#projects">
             Explore my work <ArrowIcon />
-          </Link>
+          </a>
         </div>
         <div className="values-grid">
           <article className="value-card" tabIndex={0}>

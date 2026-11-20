@@ -1,12 +1,11 @@
-import Link from "next/link";
-import SiteFooter from "../components/SiteFooter";
-import SiteHeader from "../components/SiteHeader";
+import SiteFooter from "./components/SiteFooter";
+import SiteHeader from "./components/SiteHeader";
 import {
   AboutSection,
   ConnectSection,
   ProjectsSection,
   SkillsSection,
-} from "../components/PortfolioSections";
+} from "./components/PortfolioSections";
 
 function ArrowIcon() {
   return (
@@ -44,9 +43,9 @@ export default function Home() {
           </p>
 
           <div className="hero-actions">
-            <Link className="button button-primary" href="/projects">
+            <a className="button button-primary" href="#projects">
               Explore my work <ArrowIcon />
-            </Link>
+            </a>
             <a
               className="button button-outline"
               href="https://github.com/mandlenkosizulukaptain-hub"
