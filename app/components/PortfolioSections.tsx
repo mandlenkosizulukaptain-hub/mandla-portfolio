@@ -455,10 +455,6 @@ export function ConnectSection({
                 meaningful.
               </span>
             </Heading>
-            <p className="card-hover-reveal">
-              I&apos;m open to thoughtful collaborations and new opportunities.
-              Call, text, email, or send me a message here.
-            </p>
           </div>
           <div className="connect-actions">
             <a className="button button-primary" href="tel:+263777133443">

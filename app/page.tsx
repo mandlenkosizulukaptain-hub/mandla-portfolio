@@ -115,7 +115,7 @@ export default function Home() {
       <AboutSection headingLevel="h2" />
       <SkillsSection headingLevel="h2" />
       <ProjectsSection headingLevel="h2" />
-      <ConnectSection headingLevel="h2" />
+      <ConnectSection headingLevel="h2" showContactForm />
 
       </main>
       <SiteFooter />
