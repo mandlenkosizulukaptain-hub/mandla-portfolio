@@ -232,6 +232,7 @@ main {
   align-items: center;
   justify-content: space-between;
   gap: 28px;
+  padding-inline: 16px;
   border-bottom: 1px solid rgba(193, 222, 247, 0.22);
   background: rgba(21, 40, 60, 0.58);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.24);
@@ -368,6 +369,10 @@ main {
   min-height: 38px;
   padding-inline: 15px;
   font-size: 11px;
+}
+
+.header-cta {
+  margin-right: 16px;
 }
 
 .mobile-cv-button {
