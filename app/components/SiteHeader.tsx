@@ -52,8 +52,8 @@ export default function SiteHeader({ activePage }: { activePage?: SitePage }) {
 
       <a
         className="button button-small button-primary header-cta"
-        href="/Mandlenkosi%20E.pdf"
-        download="Mandlenkosi E.pdf"
+        href="https://drive.google.com/uc?export=download&id=1pr8NFLNTp0vKWGniKPjgOCWEyOKSOg4L"
+        download="Mandlenkosi Elphas Zulu CV.pdf"
       >
         Download my CV <DownloadIcon />
       </a>

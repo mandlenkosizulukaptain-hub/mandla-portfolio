@@ -56,7 +56,7 @@ export default function Home() {
             </a>
             <a
               className="button button-outline mobile-cv-button"
-              href="/Mandlenkosi%20E.pdf"
+              href="https://drive.google.com/file/d/1pr8NFLNTp0vKWGniKPjgOCWEyOKSOg4L/view?usp=sharing"
               target="_blank"
               rel="noreferrer"
             >
@@ -95,7 +95,7 @@ export default function Home() {
               <span className="label-mark"><BrandMark /></span>
               <a
                 className="profile-cv-link"
-                href="/Mandlenkosi%20E.pdf"
+                href="https://drive.google.com/file/d/1pr8NFLNTp0vKWGniKPjgOCWEyOKSOg4L/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -115,7 +115,7 @@ export default function Home() {
       <AboutSection headingLevel="h2" />
       <SkillsSection headingLevel="h2" />
       <ProjectsSection headingLevel="h2" />
-      <ConnectSection headingLevel="h2" showContactForm />
+      <ConnectSection headingLevel="h2" />
 
       </main>
       <SiteFooter />

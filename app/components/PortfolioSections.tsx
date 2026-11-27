@@ -1,4 +1,5 @@
 import ContactForm from "./ContactForm";
+import Image from "next/image";
 
 type SectionHeadingLevel = "h1" | "h2";
 
@@ -196,21 +197,17 @@ export function ProjectsSection({
             rel="noreferrer"
             aria-label="Visit Nyamatusi Safari website"
           >
-            <div className="project-browser">
-              <div className="browser-top">
-                <span className="browser-dots"><i /><i /><i /></span>
-                <span className="browser-address">nyamatusi / safari</span>
-                <span className="browser-menu">...</span>
-              </div>
-              <div className="solar-screen">
-                <span className="solar-kicker">EXPLORE THE WILD</span>
-                <strong>Discover unforgettable<br />African safaris.</strong>
-                <span className="solar-action">Explore safaris <ArrowIcon /></span>
-                <div className="solar-sun" />
-                <div className="solar-panel panel-one" />
-                <div className="solar-panel panel-two" />
-              </div>
-            </div>
+            <Image
+              className="safari-cover-image"
+              src="/safari-cover.png"
+              alt="Zebra safari landscape"
+              fill
+              sizes="(max-width: 700px) 100vw, 33vw"
+            />
+            <span className="safari-cover-copy">
+              <small>EXPLORE THE WILD</small>
+              <strong>Discover unforgettable<br />African safaris.</strong>
+            </span>
             <span className="project-index">PROJECT / 01</span>
           </a>
           <div className="project-details">
@@ -246,12 +243,13 @@ export function ProjectsSection({
             aria-label="Open Canva design"
           >
             <div className="design-sheet">
-              <span className="design-label">CANVA / DESIGN</span>
-              <span className="design-title">Ideas into<br />experiences.</span>
-              <span className="design-shape shape-large" />
-              <span className="design-shape shape-small" />
-              <span className="design-line" />
-              <span className="design-footer">MANDLENKOSI ZULU</span>
+              <Image
+                className="design-cover-image"
+                src="/design-cover.png"
+                alt="Ideas into experiences design cover"
+                fill
+                sizes="(max-width: 700px) 100vw, 33vw"
+              />
             </div>
             <span className="project-index">PROJECT / 02</span>
           </a>
@@ -389,12 +387,13 @@ export function ProjectsSection({
             aria-label="Open Canva project"
           >
             <div className="design-sheet">
-              <span className="design-label">CANVA / PROJECT</span>
-              <span className="design-title">Create.<br />Connect. Inspire.</span>
-              <span className="design-shape shape-large" />
-              <span className="design-shape shape-small" />
-              <span className="design-line" />
-              <span className="design-footer">MANDLENKOSI ZULU</span>
+              <Image
+                className="design-cover-image"
+                src="/create-connect-cover.png"
+                alt="Create, connect, and inspire design cover"
+                fill
+                sizes="(max-width: 700px) 100vw, 33vw"
+              />
             </div>
             <span className="project-index">PROJECT / 05</span>
           </a>
@@ -427,67 +426,13 @@ export function ProjectsSection({
 
 export function ConnectSection({
   headingLevel = "h1",
-  showContactForm = false,
 }: {
   headingLevel?: SectionHeadingLevel;
-  showContactForm?: boolean;
 }) {
-  const Heading = headingLevel;
-
   return (
     <section className="connect section-shell section-divider" id="connect">
-      <div
-        className={
-          showContactForm
-            ? "connect-layout connect-layout-with-form"
-            : "connect-layout"
-        }
-      >
-        <div className="connect-card">
-          <div className="connect-orb" />
-          <div className="connect-copy">
-            <p className="eyebrow">What&apos;s next?</p>
-            <Heading>
-              <span className="connect-heading-first-line glass-text">
-                Let&apos;s make something
-              </span>
-              <span className="connect-heading-second-line glass-text">
-                meaningful.
-              </span>
-            </Heading>
-          </div>
-          <div className="connect-actions">
-            <a className="button button-primary" href="tel:+263777133443">
-              Call me
-            </a>
-            <a className="button button-outline" href="sms:+263777133443">
-              Send me a text
-            </a>
-            <a
-              className="button button-outline"
-              href="mailto:mandlenkosizulukaptain@gmail.com"
-            >
-              Email me
-            </a>
-            <a
-              className="button button-outline"
-              href="https://github.com/mandlenkosizulukaptain-hub"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Find me on GitHub <ArrowIcon />
-            </a>
-            <a
-              className="button button-outline"
-              href="https://www.canva.com/design/DAHStkf2L_M/sV2XAKSavkRslKHDxX_llw/edit"
-              target="_blank"
-              rel="noreferrer"
-            >
-              View design work
-            </a>
-          </div>
-        </div>
-        {showContactForm && <ContactForm />}
+      <div className="connect-layout">
+        <ContactForm headingLevel={headingLevel} />
       </div>
     </section>
   );

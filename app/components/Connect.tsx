@@ -13,7 +13,7 @@ export default function ConnectPage() {
     <div className="page-shell">
       <SiteHeader activePage="connect" />
       <main>
-        <ConnectSection showContactForm />
+        <ConnectSection />
       </main>
       <SiteFooter />
     </div>
